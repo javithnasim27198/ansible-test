@@ -1,0 +1,9 @@
+[pim-sit1:children]
+pim-sit1-master
+pim-sit1-slave
+
+[pim-sit1-master]
+sD01pimlapp0001 ansible_host=10.126.34.102 
+
+[pim-sit1-slave]
+sD01pimlapp0002 ansible_host=10.126.34.101

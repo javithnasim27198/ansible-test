@@ -1,0 +1,6 @@
+- name: pim sit1 connectivity
+  hosts: pim-sit1
+  tasks:
+    - name: connectivity check in pim master and slave
+      ping:
+
