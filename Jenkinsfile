@@ -4,7 +4,9 @@ pipeline{
     }
     stages{
         stage('checkout-repo'){
-            sh "sudo -u jenkins_deploy checkout scm"
+            steps{
+                sh "sudo -u jenkins_deploy checkout scm"
+            }
         }
     }
 }
