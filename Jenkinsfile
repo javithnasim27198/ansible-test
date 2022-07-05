@@ -5,7 +5,7 @@ pipeline{
     stages{
         stage('checkout-repo'){
             steps{
-                sh 'sudo -u jenkins_deploy'
+                sh 'sudo su jenkins_deploy'
                 sh 'echo $USER'
                 checkout scm
             }
