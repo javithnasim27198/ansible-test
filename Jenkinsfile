@@ -2,6 +2,7 @@ pipeline{
     agent{
         label 'dotprdwcsjnks01'
     }
+    options { skipDefaultCheckout() }
     stages{
         stage('checkout-repo'){
             steps{
