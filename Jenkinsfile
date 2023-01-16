@@ -10,7 +10,7 @@ pipeline{
                 sh 'echo $USER'
                 //checkout scm
                 sh '''
-                if [[ ${RP} =~ ['!@#$%^&*()+'] ]]
+                if [[ ${RP} =~ ['!@#$%^&*()+ '] ]]
 				  then
 				    echo "Enter valid RP name, It should not contain any special characters like !@#$%^&*()+ !!!" 
                     exit 1
