@@ -12,7 +12,7 @@ pipeline{
                 sh '''
                 if [[ ${RP} =~ ['!@#$%^&*()+'] ]]
 				  then
-				    echo "Eneterd RP name contains special characters, Please eneter valid RP name!!!" 
+				    echo "Enter valid RP name, It should not contain any special characters like !@#$%^&*()+ !!!" 
                     exit 1
 				fi 
                  '''
