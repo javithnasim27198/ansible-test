@@ -10,7 +10,7 @@ pipeline{
                 sh 'echo $USER'
                 //checkout scm
                 sh '''
-                if [[ ${RP} == *['!'@#\$%^\&*()_+]* ]]
+                if [[ ${RP} == *['!'@#\\$%^\\&*()_+]* ]]
 				  then
 				    echo "Eneterd RP name contains special character, Please eneter valid RP name!!!" 
                     exit 1
