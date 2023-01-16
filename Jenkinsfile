@@ -14,7 +14,7 @@ pipeline{
 	          then
 		    echo "Enter valid RP name, It should not contain any special characters like !@#$%^&*()+" 
                     exit 1
-		elif [[ ${RP} == '']
+		elif [[ ${RP} == '']]
 		  then
 		    echo "Enter valid RP name, It should not be empty"
 		else
