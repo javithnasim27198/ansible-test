@@ -10,11 +10,16 @@ pipeline{
                 sh 'echo $USER'
                 //checkout scm
                 sh '''
-                if [[ ${RP} =~ ['!@#$%^&*()+ '] ]]
-				  then
-				    echo "Enter valid RP name, It should not contain any special characters like !@#$%^&*()+ !!!" 
+                if [[ ${RP} =~ ['!@#$%^&*()+'] ]]
+	          then
+		    echo "Enter valid RP name, It should not contain any special characters like !@#$%^&*()+" 
                     exit 1
-				fi 
+		elif [[ ${RP} =~ ['/\A\z/'] ]]
+		  then
+		    echo "Enter valid RP name, It should not be empty"
+		else
+		  echo "restore point name : ${RP}"
+		fi 
                  '''
                 sh 'pwd; ls -lrt;'
             }
